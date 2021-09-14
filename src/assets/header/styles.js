@@ -13,6 +13,10 @@ export const Header = styled.header`
   justify-content: center;
   padding: 15px;
   margin-bottom: 10px;
+  @media(max-width: 1150px) {
+        flex-direction: column;
+        position: relative;
+    }
 
 `
 export const Button = styled.a`
