@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction:row;
   justify-content:center;
   align-items:center;
+  margin-bottom: px;
   @media(max-width: 960px) {
     flex-direction:column;
     justify-content:space-between;
@@ -55,7 +56,7 @@ export const TestMessageContainer = styled.div`
   display: flex;
   flex:1;
   width: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   flex-direction:row;
   justify-content:center;
   align-items:center;

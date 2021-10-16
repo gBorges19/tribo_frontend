@@ -34,4 +34,18 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  ::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: #0B64E1;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 5px;
+}
+
 `;
