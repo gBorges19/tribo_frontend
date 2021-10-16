@@ -8,6 +8,9 @@ import SeCuide from '../pages/SeCuide';
 import Login from '../pages/Login';
 import CriarConta from '../pages/CriarConta';
 import MinhaConta from '../pages/MinhaConta';
+import SobreNos from '../pages/SobreNos';
+import Atribuicoes from '../pages/Atribuicoes';
+import Contato from '../pages/Contato';
 
 
 
@@ -22,6 +25,9 @@ const Routes: React.FC = () =>(
         <Route path="/login"  component={Login}/>
         <Route path="/criarconta"  component={CriarConta}/>
         <Route path="/minhaconta"  component={MinhaConta}/>
+        <Route path="/sobre" component={SobreNos}/>
+        <Route path="/atribuicoes" component={Atribuicoes}/>
+        <Route path="/contato" component={Contato}/>
     </Switch>
 )
 

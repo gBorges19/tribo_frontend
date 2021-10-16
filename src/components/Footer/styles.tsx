@@ -55,3 +55,11 @@ export const Button = styled.a`
     }
 
 `
+export const Email = styled.a`
+
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+
+`
