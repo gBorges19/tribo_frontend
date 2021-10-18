@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import burroAzaralhado from '../../assets/images/mensagem/burroAzaralhado.svg'
-import play from '../../assets/images/mensagem/play.svg'
 import {
    Container,
    Content,
@@ -9,12 +8,7 @@ import {
    TestMessageContent,
    TestMessageTextArea,
    ContentSVG,
-   SVGImage,
-   RadioContainer,
-   RadioInputGroup,
-   RadioInput,
-   RadioInputLabel,
-   SVGImagePlay
+   SVGImage
 } from './styles';
 import * as GC from  '../../components/globalComponents';
 
@@ -36,7 +30,7 @@ const Mensagem: React.FC = () => {
                </TextContent>
                <TestMessageContainer>
                   <Content>
-                     <GC.Text><strong>Digite sua mensagem e clique no play:</strong></GC.Text>
+                     <GC.Text><strong>Digite sua mensagem e clique no play</strong></GC.Text>
                      <TestMessageContent>
                         <TestMessageTextArea value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
                         <Speech text={message}/>    

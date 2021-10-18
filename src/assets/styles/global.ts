@@ -35,17 +35,34 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar{
-  width: 15px;
-}
+  width: 10px;
+  }
 
-::-webkit-scrollbar-track{
-  background: #0B64E1;
-  border-radius: 0px;
-}
+  ::-webkit-scrollbar-track{
+    background: #0B64E1;
+    border-radius: 0px;
+  }
 
-::-webkit-scrollbar-thumb{
-  background-color: white;
-  border-radius: 5px;
+  ::-webkit-scrollbar-thumb{
+    background-color: #78CCFF;
+    border-radius: 5px;
+  }
+  
+  body{
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track{
+      background: #0B64E1;
+      border-radius: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background-color: white;
+      border-radius: 5px;
 }
+  }
+
 
 `;

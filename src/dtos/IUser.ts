@@ -9,9 +9,12 @@ export interface IUser {
     channelName:string;
     videoTitle:string;
     videoEmbbed:string;
+    videoUrl:string;
+    channelUrl:string;
     functionJob:string;
     functionJobXP:string;
-    linkedin:string;
+    perfil:string;
+    linkedinUrl:string;
     selfDescription:string;
     tags:string;
     password:string;

@@ -90,7 +90,7 @@ export const VideoBox = styled.div`
 
 
 export const DescriptionBox = styled.div`
-  margin: 5px;
+  margin: 10px 5px 5px 5px;
   display: flex;
   flex:1;
   flex-direction:row;
@@ -106,7 +106,7 @@ export const DescriptionBox = styled.div`
   }
 `; 
 
-export const DescriptionText = styled.h1`
+export const DescriptionText = styled.a`
   color: #9147FF;
   font-size: 1.5vw;
   font-weight: bold;

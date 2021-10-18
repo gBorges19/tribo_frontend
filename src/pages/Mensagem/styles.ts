@@ -71,7 +71,6 @@ export const SVGImage = styled.img`
   width: 100%;
   height: 100%;
   padding: 10px;
-
 `; 
 
 export const RadioContainer = styled.div`

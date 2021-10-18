@@ -87,6 +87,7 @@ export const PerfilImg = styled.img`
   border-radius:50%;
   border: 1px solid #000;
   background: #fff;
+  object-fit: cover;
 `; 
 
 export const PerfilTextBox = styled.div`
@@ -121,6 +122,10 @@ export const DescriptionText = styled.h1`
   font-size: 1.5vw;
   font-weight: bold;
   margin-left: 10px;
+  scrollbar-color: #000;
+  @media(max-width: 960px) {
+    font-size:  2vh;
+  }
 `; 
 
 export const DescriptionLabel = styled.h1`
@@ -128,6 +133,9 @@ export const DescriptionLabel = styled.h1`
   font-size: 1.25vw;
   margin-top: 10px;
   margin-bottom: auto;
+  @media(max-width: 960px) {
+    font-size: 1.5vh;
+  }
 `; 
 
 export const TagsAndInBox = styled.div`

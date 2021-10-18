@@ -29,15 +29,9 @@ import donkey_left from '../../assets/images/home/donkey_left.svg';
 
 import linkedinImg from '../../assets/images/curral/in.svg';
 
+import {fakeUsersData} from '../../assets/fakeData';
+
 const Curral: React.FC = () => {
-   const {fakeUsers} = useFakeUsers();
-
-   const [users,setUsers] = useState<User[]>([]);
-
-   useEffect(()=>{
-         setUsers([...users,...fakeUsers])
-   },[]);
-
 
    return (
       <PageContainer>
@@ -49,10 +43,29 @@ const Curral: React.FC = () => {
             </Content>
             <ContentList>
                <CardsGrid>
-                  {users.map((user)=>(
+                  {fakeUsersData.map((user)=>(
                      <Card key={user.id}>
                         <PerfilBox>
-                           <PerfilImg src={donkey_left} alt={"Imagem da mula"}/>
+                           <PerfilImg src={user.perfil} alt={"Imagem da mula"}/>
+                           <PerfilTextBox>
+                              <PerfilText>{user.fullName}</PerfilText>
+                              <PerfilText>{user.functionJob}</PerfilText>
+                           </PerfilTextBox>
+                        </PerfilBox>
+                        <DescriptionBox>
+                           <DescriptionText>Descrição:</DescriptionText>
+                           <DescriptionLabel>{user.selfDescription}</DescriptionLabel>
+                        </DescriptionBox>
+                        <TagsAndInBox>
+                           <TagsContent>{`${user.city} - ${user.uf}`}</TagsContent>
+                           <a target={"_blank"} href={user.linkedinUrl}><InImg src={linkedinImg} alt={"Ir para linkedin da mula"}></InImg></a>
+                        </TagsAndInBox>
+                     </Card> 
+                  ))}
+                  {fakeUsersData.map((user)=>(
+                     <Card key={user.id}>
+                        <PerfilBox>
+                           <PerfilImg src={user.perfil} alt={"Imagem da mula"}/>
                            <PerfilTextBox>
                               <PerfilText>{user.fullName}</PerfilText>
                               <PerfilText>{user.functionJob}</PerfilText>

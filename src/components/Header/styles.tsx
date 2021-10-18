@@ -11,12 +11,17 @@ export const Header = styled.header`
   align-items: center;
   justify-content: center;
   padding: 15px;
-  @media(max-width: 1150px) {
+  @media(max-width: 720px) {
         flex-direction: column;
         position: relative;
   }
 
 `
+
+export const SVGImage = styled.img`
+  width: 150px;
+  height: 150px;
+`; 
 export const Button = styled.a`
 
     color: #fff;

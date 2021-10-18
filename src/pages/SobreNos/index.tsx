@@ -6,10 +6,7 @@ import * as GC from  '../../components/globalComponents';
 
 import {
     Container,
-    Content,
-    TextContainer,
-    Text,
-  
+    Content
  } from './styles';
 
 
@@ -19,11 +16,14 @@ const SobreNos: React.FC = () => {
 
         <>
          <Container>
+            <GC.Title>SOBRE NÓS</GC.Title>
             <Content>
-            <GC.Title>SOBRE NÓS!</GC.Title>
-                <TextContainer>
-                    <Text>Somos uma iniciativa criada pensando em fornecer um espaço para as mulas que habitam o chat das lives do Gaules. Se de alguma maneira conseguirmos ajudar uma dessas mulas, a iniciativa valeu a pena!</Text>
-                </TextContainer>
+               <GC.Text>Assim como vocês, também somos mulas da tribo! Este espaço é uma iniciativa criada pensando em dar visibilidade para os participantes da comunidade mulística que habitam o chat das lives do Gaules mais conhecido como "Cabeça de Nós Todos".</GC.Text>
+               <GC.Text>Aqui você tem oportunidade de divulgar seu conteúdo e seu perfil profissional.</GC.Text>
+               <GC.Text>Aproveite e não esqueça de manter seu cadastro atualizado!</GC.Text>
+               <GC.Text>Caso queira falar conosco, não deixe de entrar em contato.</GC.Text>
+               <GC.Text>Nossa intenção é ajudar! Se de alguma maneira nós conseguirmos ajudar pelo menos um, já valeu a pena!</GC.Text>
+               
             </Content>
          </Container>
       <Footer/>

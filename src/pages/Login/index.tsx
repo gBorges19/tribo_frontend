@@ -8,11 +8,6 @@ import Footer from '../../components/Footer';
 
 import { useAuth } from '../../context/auth';
 
-interface SignInFormData {
-   email: string;
-   password: string;
- }
-
 const Login: React.FC = () => {
    
    const { signIn } = useAuth();

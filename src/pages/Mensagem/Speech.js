@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {SVGImagePlay} from './styles';
 import play from '../../assets/images/mensagem/play.svg'

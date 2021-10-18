@@ -15,12 +15,6 @@ export const Nav = styled.div`
   align-items: center;
   justify-content: center;
   padding: 15px;
-
-  img {
-    @media(max-width: 1150px) {
-        width:25%;
-    }
-  }
 `;
 
 export const NavSpacer = styled.div`
@@ -52,11 +46,13 @@ export const NavTitle = styled.h1`
 `;
 
 export const NavLogo = styled.img`
-  margin-left: auto;
-  height: 70px;
-  margin-right: 2rem;
   padding: 5px;
-  justify-self:flex-end;
+  height: 8vh;
+  width: 9vh;
+  @media(min-width: 1150px) {
+        margin-left: 2rem;
+  }
+
 `;
 
 
@@ -119,3 +115,4 @@ export const Button = styled.a`
     }
 
 `
+

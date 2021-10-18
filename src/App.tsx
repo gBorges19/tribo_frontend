@@ -3,7 +3,6 @@ import {BrowserRouter} from 'react-router-dom';
 import Routes from './routes';
 import GlobalStyle from './assets/styles/global';
 import AppProvider from './context';
-import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
 const App:React.FC = ()=>(

@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useState, useContext, useEffect } from 'react';
+import React, { createContext, useCallback, useState, useContext } from 'react';
 
 import {useFakeUsers} from './fakeusers'
 import {IUser as User} from '../dtos/IUser'
@@ -59,13 +59,13 @@ const AuthProvider: React.FC = ({ children }) => {
     }
 
 
-  }, [fakeUsers]);
+  }, [fakeUsers,history]);
 
   const getLoggedUser = useCallback(async ():Promise<User> => {
 
     return authData.user;
 
-  }, [fakeUsers]);
+  }, [authData.user]);
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@MulasDaTribo:token');

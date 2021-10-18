@@ -12,7 +12,6 @@ import {
 } from './styles';
 import * as GC from  '../../components/globalComponents';
 
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 const SeCuide: React.FC = () => {

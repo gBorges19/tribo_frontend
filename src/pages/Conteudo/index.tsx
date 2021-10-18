@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
 import {
    PageContainer,
@@ -15,7 +15,10 @@ import * as GC from  '../../components/globalComponents';
 
 import Footer from '../../components/Footer';
 
+import {fakeUsersData} from '../../assets/fakeData';
+
 const Conteudo: React.FC = () => {
+
 
    return (
       <PageContainer>
@@ -27,126 +30,42 @@ const Conteudo: React.FC = () => {
             </Content>
             <ContentList>
                <CardsGrid>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+               {fakeUsersData.map((user)=>(
+                  <Card key={user.id}>
+                     <VideoBox dangerouslySetInnerHTML={{__html: user.videoEmbbed}}>
                      </VideoBox>
                      <DescriptionBox>
                         <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
                            Vídeo:
                         </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
+                        <DescriptionText target={"_blank"} href={user.videoUrl}>{user.videoTitle}</DescriptionText> 
                      </DescriptionBox>
                      <DescriptionBox>
                         <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
                            Canal:
                         </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
+                        <DescriptionText target={"_blank"} href={user.channelUrl}>{user.channelName}</DescriptionText> 
                      </DescriptionBox>
                   </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+               ))}
+               {fakeUsersData.map((user)=>(
+                  <Card key={user.id}>
+                     <VideoBox dangerouslySetInnerHTML={{__html: user.videoEmbbed}}>
                      </VideoBox>
                      <DescriptionBox>
                         <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
                            Vídeo:
                         </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
+                        <DescriptionText target={"_blank"} href={user.videoUrl}>{user.videoTitle}</DescriptionText> 
                      </DescriptionBox>
                      <DescriptionBox>
                         <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
                            Canal:
                         </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
+                        <DescriptionText target={"_blank"} href={user.channelUrl}>{user.channelName}</DescriptionText> 
                      </DescriptionBox>
                   </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                     </VideoBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Vídeo:
-                        </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
-                     </DescriptionBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Canal:
-                        </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
-                     </DescriptionBox>
-                  </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                     </VideoBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Vídeo:
-                        </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
-                     </DescriptionBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Canal:
-                        </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
-                     </DescriptionBox>
-                  </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                     </VideoBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Vídeo:
-                        </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
-                     </DescriptionBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Canal:
-                        </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
-                     </DescriptionBox>
-                  </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                     </VideoBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Vídeo:
-                        </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
-                     </DescriptionBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Canal:
-                        </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
-                     </DescriptionBox>
-                  </Card>
-                  <Card>
-                     <VideoBox>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/haw84hE_JWY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                     </VideoBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Vídeo:
-                        </GC.TextSecondary>
-                        <DescriptionText>Kwid Intense 1.0 12V</DescriptionText> 
-                     </DescriptionBox>
-                     <DescriptionBox>
-                        <GC.TextSecondary marginTop={"0px"} marginBottom={"0px"}>
-                           Canal:
-                        </GC.TextSecondary>
-                        <DescriptionText>Descubra Carros</DescriptionText> 
-                     </DescriptionBox>
-                  </Card>
-                  
+               ))}               
                </CardsGrid>
             </ContentList>
          </Container>

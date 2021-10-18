@@ -8,8 +8,6 @@ import {
     Container,
     Content,
     Email,
-    Text,
-  
  } from './styles';
 
 
@@ -19,10 +17,11 @@ const Contato: React.FC = () => {
 
         <>
          <Container>
-            <Content>
             <GC.Title>CONTATO</GC.Title>
-            <Text>Entre em contato através do email:</Text>
-            <Email href="mailto:muladatribo@gmail.com">muladatribo@gmail.com</Email>
+            <Content>
+               <GC.Text>Caso queira entrar em contato conosco, mande um email para </GC.Text>
+               <Email href="mailto:muladatribo@gmail.com">muladatribo@gmail.com</Email>
+               <GC.Text>que iremos te responder o mais rápido possível!</GC.Text>
             </Content>
          </Container>
       <Footer/>

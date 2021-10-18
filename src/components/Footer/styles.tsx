@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Footer = styled.div`
   width: 100vw;
-  height: 10vh;
   background: linear-gradient(90deg, #0B64E1 -3.52%, rgba(56, 171, 241, 0.51) 100%);
   position: sticky;
   top: 0;
@@ -16,7 +15,9 @@ export const Footer = styled.div`
         flex-direction: column;
         position: relative;
     }
-    
+    @media(min-width: 1150px) {
+        height: 10vh;
+    }
 `;
 
 export const Button = styled.a`

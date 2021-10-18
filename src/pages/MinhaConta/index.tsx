@@ -17,7 +17,7 @@ const MinhaConta: React.FC = () => {
 
    useEffect(()=>{
       setLoggedUser(user);
-   })
+   },[user])
 
    return (
       <>
@@ -102,7 +102,7 @@ const MinhaConta: React.FC = () => {
                      </InputBox>
                      <InputBox>
                         <GC.Text marginBottom={"10px"} marginTop={"10px"}>Linkedin:</GC.Text>
-                        <InputText type="text" value={loggedUser.linkedin} ></InputText>  
+                        <InputText type="text" value={loggedUser.linkedinUrl} ></InputText>  
                      </InputBox>
                   </SectionContent>  
 

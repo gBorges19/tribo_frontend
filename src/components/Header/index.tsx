@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
 
     <H.Header>
-      <img src={Capa} alt="Capacete da Tribo" width="5%"></img>
+      <H.SVGImage src={Capa} alt="Capacete da Tribo"></H.SVGImage>
       <H.Button href="/">Inicio</H.Button>
       <H.Button href="/mensagem">Mensagem</H.Button>
       <H.Button href="/conteudo">Conteúdos das Mulas</H.Button>

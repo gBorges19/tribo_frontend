@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
-import { Nav, NavSpacer, NavIcon, Button, NavTitle, NavLogo, SidebarNav, SidebarWrap } from './styles';
+import { Nav, NavIcon, Button,  NavLogo, SidebarNav, SidebarWrap } from './styles';
 
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
@@ -11,21 +11,6 @@ import { IconContext } from 'react-icons/lib';
 
 import Capa from "../../assets/images/header/capa.png"
 import { useAuth } from '../../context/auth';
-
-interface ISubNavProps {
-   title: string;
-   path: string;
-   icon: object;
-}
-
-interface IItemPropros {
-   title: string;
-   path: string;
-   icon: object;
-   iconClosed: object;
-   iconOpened: object;
-   subNav: ISubNavProps[];
-}
 
 const Sidebar: React.FC = () => {
 
@@ -39,7 +24,7 @@ const Sidebar: React.FC = () => {
       <>
          <IconContext.Provider value={{color: '#fff'}}>
          <Nav>
-            <img src={Capa} alt="Capacete da Tribo" width="5%"></img>
+            <NavLogo src={Capa} alt="Capacete da Tribo" width="5%"></NavLogo>
             <Button href="/">Inicio</Button>
             <Button href="/mensagem">Mensagem</Button>
             <Button href="/conteudo">Conteúdos das Mulas</Button>

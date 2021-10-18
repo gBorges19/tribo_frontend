@@ -12,7 +12,7 @@ import { useAuth } from '../../context/auth';
 
 const CriarConta: React.FC = () => {
 
-   const { fakeUsers, addUser } = useFakeUsers();
+   const { fakeUsers } = useFakeUsers();
    const { signIn } = useAuth();
 
    const [fullName,setFullName]= useState('x');
@@ -28,9 +28,14 @@ const CriarConta: React.FC = () => {
    const [videoEmbbed,setVideoEmbbed]= useState('x');
    const [functionJob,setFunctionJob]= useState('x');
    const [functionJobXP,setFunctionJobXP]= useState('Prata');
-   const [linkedin,setLinkedin]= useState('x');
+   const [linkedinUrl,setLinkedinUrl]= useState('x');
    const [selfDescription,setSelfDescription]= useState('x');
    const [tags,setTags]= useState('x');
+   const [videoUrl,setVideoUrl]= useState('x');
+   const [channelUrl,setChannelUrl]= useState('x');
+   const [perfil,setPerfil]= useState('x');
+
+
 
    const handleSubmit = useCallback(async()=>{
       const newUser = {
@@ -46,7 +51,7 @@ const CriarConta: React.FC = () => {
          videoEmbbed,
          functionJob,
          functionJobXP,
-         linkedin,
+         linkedinUrl,
          selfDescription,
          tags,
          password,
@@ -55,8 +60,6 @@ const CriarConta: React.FC = () => {
       console.log(newUser);
 
    },[
-         addUser,
-         signIn,
          fullName,
          city,
          uf,
@@ -68,11 +71,10 @@ const CriarConta: React.FC = () => {
          videoEmbbed,
          functionJob,
          functionJobXP,
-         linkedin,
+         linkedinUrl,
          selfDescription,
          tags,
          password,
-         confirmPassword
       ]
    ) 
 
@@ -81,7 +83,7 @@ const CriarConta: React.FC = () => {
          email: email,
          password: password,
       });
-   },[fakeUsers]) 
+   },[fakeUsers,email,password,signIn]) 
 
 
    return (
@@ -167,7 +169,7 @@ const CriarConta: React.FC = () => {
                      </InputBox>
                      <InputBox>
                         <GC.Text marginBottom={"10px"} marginTop={"10px"}>Linkedin:</GC.Text>
-                        <InputText type="text" value={linkedin} onChange={(e)=>{setLinkedin(e.target.value)}}></InputText>  
+                        <InputText type="text" value={linkedinUrl} onChange={(e)=>{setLinkedinUrl(e.target.value)}}></InputText>  
                      </InputBox>
                   </SectionContent>  
 

@@ -1,22 +1,6 @@
 import React, { useState } from 'react';
 import { SidebarLink, SidebarLabel, DropdownLink } from './styles';
 
-
-interface ISubNavProps {
-    title: string;
-    path: string;
-    icon: object;
-}
-
-interface IItemPropros {
-        title: string;
-        path: string;
-        icon: object;
-        iconClosed: object;
-        iconOpened: object;
-        subNav: ISubNavProps[];
-}
-
 const SubMenu = ({item}:any) => {
 
     const [subnav, setSubnav] = useState(false);
